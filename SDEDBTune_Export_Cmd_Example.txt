@@ -1,0 +1,10 @@
+REM Windows Command Line Script To Interact With ArcSDE At Command Line.
+REM Created as example by geodev-97 for Github Example
+SET db=MyDatabaseName
+SET usr=UserNameWhoOwnsTheDB
+SET svr=ServerName
+SET inst=sde:sqlserver:ServerName\MyDBInstanceName
+sdedbtune -o export -f sde.dbtune -i %inst% -s %svr% -D %db% -u %usr%
+echo time |time|find "current"
+echo date |date|find "current"
+echo EXPORT OF SDE.DBTUNE FILE HAS BEEN COMPLETED
